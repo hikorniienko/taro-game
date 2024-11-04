@@ -4,6 +4,7 @@ import { Client } from 'appwrite';
 
 import App from './App';
 
+
 const client = new Client();
 client.setProject('6728ee60001d622e9a7a');
 
