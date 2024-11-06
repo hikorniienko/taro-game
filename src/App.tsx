@@ -1,5 +1,5 @@
 import './App.css';
-import { createAccount, createSession, createEmailPasswordSession, deleteCurrentSession,  getTokents } from './api';
+import { createAccount, createSession, createEmailPasswordSession, deleteCurrentSession,  getCredits } from './api';
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <button onClick={() => createAccount('test@mail.com','pwonline12', 'test')}>Create Account</button>
       <button onClick={() => createEmailPasswordSession('test@mail.com', 'pwonline12')}>Login</button>
       <button onClick={() => deleteCurrentSession()}>Logout</button>
-      <button onClick={() => getTokents()}>Get Tokens</button>
+      <button onClick={() => getCredits()}>Get Tokens</button>
 
     </div>
   );

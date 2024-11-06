@@ -1,7 +1,7 @@
 import { Client, Databases, Account, Functions, ExecutionMethod, Models } from "appwrite";
 
 const projectID = '6728ee60001d622e9a7a';
-const functionId = '67291bf1001cbbd0a2b5';
+const functionId = '672a7ca40025f2c5d0cd';
 
 const client = new Client();
 client.setProject(projectID);
@@ -32,16 +32,12 @@ export const getUser = () => {
   return account.get();
 }
 
-export const getTokents = async () => {
-  const userId = (await getUser()).$id;
-
+export const getCredits = async () => {
   return functions.createExecution(
     functionId, // functionId
-    JSON.stringify({
-      userId
-    }), // body (optional)
+    JSON.stringify({}), // body (optional)
     false, // async (optional)
-    '/', // path (optional)
-    ExecutionMethod.POST, // method (optional)
-);
+    '/credits', // path (optional)
+    ExecutionMethod.GET, // method (optional)
+  );
 }
